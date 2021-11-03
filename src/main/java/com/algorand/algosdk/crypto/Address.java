@@ -8,7 +8,7 @@ import java.security.KeyFactory;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.apache.commons.codec.binary.Base32;
+import algorandv2.org.apache.commons.codec.binary.Base32;
 
 import java.io.Serializable;
 import java.security.NoSuchAlgorithmException;

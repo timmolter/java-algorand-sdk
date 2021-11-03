@@ -53,8 +53,8 @@ public class Client {
         for (Entry<String, String> kvp : qData.queries.entrySet()) {
             try {
                 // Try using a different URLEncoder because OkHttp does not encode ':' characters.
-                String encodedKey = URLEncoder.encode(kvp.getKey(), StandardCharsets.UTF_8.toString());
-                String encodedValue = URLEncoder.encode(kvp.getValue(), StandardCharsets.UTF_8.toString());
+                String encodedKey = URLEncoder.encode(kvp.getKey(), "UTF-8");
+                String encodedValue = URLEncoder.encode(kvp.getValue(), "UTF-8");
                 httpUrlBuilder.addEncodedQueryParameter(encodedKey, encodedValue);
             } catch (UnsupportedEncodingException e) {
                 httpUrlBuilder.addQueryParameter(kvp.getKey(), kvp.getValue());
